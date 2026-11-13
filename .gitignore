@@ -1,0 +1,12 @@
+# Large market data, kept out of the repo
+data/
+
+# C/C++ build output
+build/
+*.o
+*.a
+*.so
+*.out
+
+# Editor clutter
+.vscode/
