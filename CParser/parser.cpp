@@ -3,13 +3,19 @@
 #include <iostream>
 #include "itch.hpp"
 
-int main() {
+int main(int argc, char* argv[]) {
+
+    if (argc != 2) {
+        std::cerr << "usage: " << argv[0] << " <itch_file>" << std::endl;
+        return 1;
+    }
+
     // Converts the file into an object
-    std::ifstream file("data/itch_100B.bin", std::ios::binary);
+    std::ifstream file(argv[1], std::ios::binary);
 
     // Handles error if the file cannot be opened
     if (!file) {
-        std::cerr << "Error opening file." << std::endl;
+        std::cerr << "Error opening file "<< argv[1] << std::endl;
         return 1;
     }
 
