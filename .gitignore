@@ -12,4 +12,4 @@ build/
 .vscode/
 
 # Claude md
-*.md
+CLAUDE.md
